@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "915f8dac-bf01-4358-b833-0c7d07b3d0ec",
+		"name": "kinetik-telemetry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "yojv8wVLPgh6hVzm3UuU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5001/api/users?id=1&email=test@test.test",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "email",
+							"value": "test@test.test"
+						}
+					]
+				},
+				"description": "filters:\n- id\n- email"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test1@test.test\",\n    \"password\": \"123123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "filters:\n- id\n- email"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/sessions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"url": {
+					"raw": "localhost:5001/api/sessions?id=1&weather=clear&user_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "weather",
+							"value": "clear"
+						},
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/sessions/:id/bestlap",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"url": {
+					"raw": "localhost:5001/api/sessions/6/bestlap",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sessions",
+						"6",
+						"bestlap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/sessions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"weather\": \"clear\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/api/sessions",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/laps",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"url": {
+					"raw": "localhost:5001/api/laps?id=1&session_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"laps"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "session_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/laps",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"session_id\": 1,\n    \"time\": 69.69\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/api/laps",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"laps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/lap-fragments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"url": {
+					"raw": "localhost:5001/api/lap-fragments?id=1&lap_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"lap-fragments"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "lap_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/lap-fragments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "yojv8wVLPgh6hVzm3UuU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"velocity\": 5,\n    \"rpm\": 4500,\n    \"tps\": 70,\n    \"state_of_charge\": 85,\n    \"temp_for_motor\": 55,\n    \"temp_for_controller\": 60,\n    \"latitude\": \"43.23347348509856\",\n    \"longitude\": \"27.96505419845983\",\n    \"lap_id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/api/lap-fragments",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"lap-fragments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

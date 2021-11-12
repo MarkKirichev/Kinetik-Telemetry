@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinetik Telemetry</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnsrK-_l5YHEglvI6FSRiIJKa9_doX0z8&callback=initMap&libraries=&v=weekly&channel=2" async></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #map {
+        height: 720px;
+        width: 100%;
+    }
+
+    #data-table {
+        margin-top: 20px;
+        border: 1px solid black;
+    }
+
+    #data-table td {
+        padding: 5px 10px;
+        border: 1px solid black;
+    }
+
+    #clear-markers {
+        margin-top: 20px;
+        cursor: pointer;
+        background: lightgray;
+        width: 140px;
+        text-align: center;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        padding: 5px;
+    }
+</style>
+<body>
+<!--<div id="map"></div>-->
+<!--<div id="clear-markers">Clear markers</div>-->
+<!--<table id="data-table">-->
+<!--    <tr>-->
+<!--        <td>velocity</td>-->
+<!--        <td>state_of_charge</td>-->
+<!--        <td>temp_for_controller</td>-->
+<!--        <td>temp_for_motor</td>-->
+<!--        <td>latitude</td>-->
+<!--        <td>longitude</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<script>
+  // let map = null;
+  // let markers = [];
+  // function initMap() {
+  //   map = new google.maps.Map(document.getElementById("map"), {
+  //     zoom: 19,
+  //     center: { lat: 43.233990, lng: 27.965691 },
+  //   });
+  // }
+  //
+  // $('#clear-markers').on('click', () => {
+  //   clearMarkers();
+  // });
+  //
+  // function clearMarkers() {
+  //   for (let i = 0; i < markers.length; i++) {
+  //     markers[i].setMap(null);
+  //   }
+  //
+  //   markers = [];
+  // }
+  //
+  // function checkStartFinal(lat, lng) {
+  //   if (lat > 43.233846 && lat < 43.233856 && lng > 27.964878 && lng < 27.964887) {
+  //     clearMarkers();
+  //   }
+  // }
+  //
+  // (function() {
+  //   window.onload = function() {
+  //     const socket = new WebSocket('ws://localhost:5002');
+  //
+  //     socket.addEventListener('open', function(event) {
+  //       socket.send('Client added.');
+  //     });
+  //
+  //     socket.addEventListener('message', function(event) {
+  //       let data = JSON.parse(event.data);
+  //       checkStartFinal(parseFloat(data.latitude), parseFloat(data.longitude));
+  //
+  //       let marker = new google.maps.Marker({
+  //         position: { lat: parseFloat(data.latitude), lng: parseFloat(data.longitude) },
+  //         map: map,
+  //         icon: 'https://i.ibb.co/zxVY7TG/1.png',
+  //       });
+  //       markers.push(marker);
+  //
+  //       // $('#data-table').append(
+  //       //     `<tr>
+  //       //             <td>${data.velocity}</td>
+  //       //             <td>${data.state_of_charge}</td>
+  //       //             <td>${data.temp_for_controller}</td>
+  //       //             <td>${data.temp_for_motor}</td>
+  //       //             <td>${data.latitude}</td>
+  //       //             <td>${data.longitude}</td>
+  //       //      </tr>
+  //       // `);
+  //     });
+  //   };
+  // })();
+</script>
+</body>
+</html>
